@@ -3,8 +3,8 @@ package home.vitaly.datamodel;
 import java.io.Serializable;
 
 public interface Transaction extends Serializable {
-    public Long getId();
-    public void setId(Long id);
+    public Long getTrid();
+    public void setTrid(Long trid);
     public String getAi();
     public void setAi(String ai);
     public Integer getTtype();

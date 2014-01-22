@@ -1,6 +1,11 @@
+/**************************************************************************************
+ * Copyright (C) 2014 Vitaly&Pavel team. All rights reserved.                         *
+ *                                                                                    *
+ * ---------------------------------------------------------------------------------- *
+ * The software in this package is published under the terms of the GPL license       *
+ * a copy of which has been included with this distribution in the license.txt file.  *
+ **************************************************************************************/
 package home.vitaly.datamodel;
-
-import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,7 +19,8 @@ public class TransactionImpl  implements Transaction {
     /**
 	 *  transaction model
 	 */
-	private Long id;
+
+    private Long trid;
     private String ai;
     private Integer ttype ;
     private String cardnum;
@@ -35,14 +41,17 @@ public class TransactionImpl  implements Transaction {
     private Integer acqid;
     private Integer rvrsl;
 
+//    public Long getId() { return trid; }
+//    public void setId(Long trid) { this.trid=trid; }
+
     @Id
-    @Column(name = "id")
-    public Long getId() {
-		return id;
+    @Column(name = "trid")
+    public Long getTrid() {
+		return trid;
 	}
 	
-    public void setId(Long id) {
-		this.id = id;
+    public void setTrid(Long trid) {
+		this.trid = trid;
 	}
     
     @Column(name = "ai")
@@ -183,7 +192,7 @@ public class TransactionImpl  implements Transaction {
 	public String toString () {
 		String DLMTR = "\n";
 		return (
-				" ID:"+  id +DLMTR+
+				" Trid:"+  trid +DLMTR+
 				" Acc.curr:"+ accur+DLMTR+
 				" Address:"+  address+DLMTR+
 				" Ai:"+  ai+DLMTR+
